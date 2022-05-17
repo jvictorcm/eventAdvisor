@@ -2,7 +2,6 @@ package de.victor.eventadvisor.service;
 
 import de.victor.eventadvisor.model.Event;
 import de.victor.eventadvisor.service.publicApiResponse.PublicApiResponse;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -14,7 +13,7 @@ public interface EventService {
 
     List<Event> findByDistrict(String district);
 
-    void processVote(String eventId, @NotNull String vote);
+    void processVote(String eventId, String vote);
 
     List<Event> listBestRankedEvents();
 }

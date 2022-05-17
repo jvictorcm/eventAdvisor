@@ -6,7 +6,6 @@ import de.victor.eventadvisor.service.EventService;
 import de.victor.eventadvisor.service.PublicApiService;
 import de.victor.eventadvisor.service.publicApiResponse.Feature;
 import de.victor.eventadvisor.service.publicApiResponse.PublicApiResponse;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,7 +45,7 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public void processVote(String eventId, @NotNull String vote) {
+    public void processVote(String eventId, String vote) {
         eventRepository.voteEvent(vote.equals("UP") ? 1 : -1, Long.valueOf(eventId));
     }
 
