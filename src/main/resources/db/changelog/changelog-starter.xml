@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+    <changeSet author="jvictorcm" id="starter">
+        <sql dbms="mysql"
+             endDelimiter="\nGO"
+             splitStatements="true"
+             stripComments="true">
+            CREATE TABLE public_api (
+            id int unsigned NOT NULL,
+            updated_at TIMESTAMP NOT NULL,
+            PRIMARY KEY(id)
+            );
+        </sql>
+        <sql dbms="mysql"
+             endDelimiter="\nGO"
+             splitStatements="true"
+             stripComments="true">
+            INSERT INTO public_api values
+            (1, date_add(now(),interval -4 hour));
+        </sql>
+    </changeSet>
+</databaseChangeLog>

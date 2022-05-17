@@ -22,7 +22,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 //    runtimeOnly("io.micrometer:micrometer-registry-new-relic")
 //    implementation("org.springdoc:springdoc-openapi-ui:1.6.8")
-//    implementation("org.liquibase:liquibase-core")
+    implementation("org.liquibase:liquibase-core")
     runtimeOnly("mysql:mysql-connector-java:8.0.29")
     testImplementation("junit:junit:4.12")
     testImplementation("org.springframework.boot:spring-boot-starter-test")

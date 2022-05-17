@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+      http://www.liquibase.org/xml/ns/pro
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+    <changeSet author="jvictorcm" id="event">
+        <sql dbms="mysql"
+             endDelimiter="\nGO"
+             splitStatements="true"
+             stripComments="true">
+            CREATE TABLE event (
+                id int unsigned NOT NULL,
+                bezirk varchar(500),
+                bezeichnung varchar(500),
+                strasse varchar(500),
+                plz int,
+                von TIMESTAMP,
+                bis TIMESTAMP,
+                zeit varchar(500),
+                veranstalter varchar(500),
+                mail varchar(500),
+                www varchar(500),
+                bemerkungen varchar(500),
+                _wgs84_lat varchar(50),
+                _wgs84_lon varchar(50),
+                PRIMARY KEY(id)
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>
