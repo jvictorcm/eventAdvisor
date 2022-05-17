@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0.12
+    container_name: event-advisor-database
+    ports:
+      - "3306:3306"
+    stdin_open: true
+    tty: true
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "eventAdvisorDb"
