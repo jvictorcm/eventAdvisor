@@ -23,6 +23,8 @@ public class Event {
     private String bemerkungen;
     private String _wgs84_lat;
     private String _wgs84_lon;
+    private int eventScore = 0;
+
 
     public Event(Long id, String bezirk, String bezeichnung, String strasse, Long plz, LocalDate von, LocalDate bis, String zeit, String veranstalter, String mail, String www, String bemerkungen, String _wgs84_lat, String _wgs84_lon) {
         this.id = id;
@@ -171,5 +173,13 @@ public class Event {
 
     public void set_wgs84_lon(String _wgs84_lon) {
         this._wgs84_lon = _wgs84_lon;
+    }
+
+    public int getEventScore() {
+        return eventScore;
+    }
+
+    public void setEventScore(int eventScore) {
+        this.eventScore = eventScore;
     }
 }

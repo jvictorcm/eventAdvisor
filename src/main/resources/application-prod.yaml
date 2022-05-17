@@ -2,8 +2,6 @@ server:
   port: 1001
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/eventAdvisorDb?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://rds:3306/eventAdvisorDb?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: root
-
-public.api.url: https://www.berlin.de/sen/web/service/maerkte-feste/strassen-volksfeste/index.php/index.gjson?q=&ipp=100000

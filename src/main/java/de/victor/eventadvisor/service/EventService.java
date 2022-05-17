@@ -1,24 +1,20 @@
 package de.victor.eventadvisor.service;
 
 import de.victor.eventadvisor.model.Event;
-import de.victor.eventadvisor.repository.EventRepository;
-import de.victor.eventadvisor.service.publicApiResponse.Feature;
 import de.victor.eventadvisor.service.publicApiResponse.PublicApiResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class EventService {
+public interface EventService {
 
-    @Autowired
-    private EventRepository eventRepository;
+    void processNewRemoteValues(PublicApiResponse result);
 
-    public void processNewRemoteValues(PublicApiResponse result) {
-        List<Event> toBeSaved = new ArrayList<Event>();
-        for (Feature featurePiece : result.getFeatures()) {
-            toBeSaved.add(new Event(featurePiece.getProperties().getData()));
-        }
-        eventRepository.saveAll(toBeSaved);
-    }
+    List<Event> findBierEvent();
+
+    List<Event> findByDistrict(String district);
+
+    void processVote(String eventId, @NotNull String vote);
+
+    List<Event> listBestRankedEvents();
 }

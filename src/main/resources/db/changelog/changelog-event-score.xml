@@ -7,7 +7,13 @@
       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
       http://www.liquibase.org/xml/ns/pro
       http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
-    <include file="/db/changelog/changelog-starter.xml"/>
-    <include file="/db/changelog/changelog-event.xml"/>
-    <include file="/db/changelog/changelog-event-score.xml"/>
+    <changeSet author="jvictorcm" id="event">
+        <sql dbms="mysql"
+             endDelimiter="\nGO"
+             splitStatements="true"
+             stripComments="true">
+            ALTER TABLE event
+            ADD event_score int;
+        </sql>
+    </changeSet>
 </databaseChangeLog>
