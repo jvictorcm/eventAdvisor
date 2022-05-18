@@ -1,7 +1,13 @@
 server:
-  port: 1001
+  port: '${PORT:80}'
 spring:
   datasource:
     url: jdbc:mysql://rds:3306/eventAdvisorDb?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: root
+
+management:
+  metrics:
+    export:
+      newrelic:
+        enabled: true

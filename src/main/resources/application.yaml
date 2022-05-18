@@ -21,6 +21,13 @@ logging:
     root: INFO
 
 management:
+  metrics:
+    export:
+      newrelic:
+        enabled: false
+        account-id: '${NEW_RELIC_ACCOUNT_ID}'
+        api-key: '${NEW_RELIC_API_KEY}'
+        #proxysettings
   endpoints:
     web.exposure.include: health, metrics
 
