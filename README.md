@@ -7,6 +7,9 @@ docker-compose up
 ./gradlew clean bootRun
 ```
 
+## OpenApi
+http://localhost:8080/swagger-ui/index.html#/
+
 #### MISSING <-> If Had more time
 
 * improved api docs
