@@ -26,3 +26,4 @@ http://localhost:8080/swagger-ui/index.html#/
 #### Tech options
 
 * batch solution to fetch remote that instead of inner project. picked a 4 hours window to update current database.
+* use keyspaces(aws) solution to geolocation data
